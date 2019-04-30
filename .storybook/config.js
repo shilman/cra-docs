@@ -1,16 +1,10 @@
-import { load, addParameters } from '@storybook/react';
-import { Wrapper } from '@storybook/components';
+import { load, addParameters } from "@storybook/react";
 
 addParameters({
   options: {
-    docs: {
-      inlineStories: true,
-      mdxComponents: {
-        wrapper: Wrapper,
-      },
-    },
+    docs: { inlineStories: true }
   }
 });
 
-load(require.context('../src', true, /\.stories\.js$/), module);
-load(require.context('../src', true, /\.stories\.mdx$/), module);
+load(require.context("../src", true, /\.stories\.js$/), module);
+load(require.context("../src", true, /\.stories\.mdx$/), module);
